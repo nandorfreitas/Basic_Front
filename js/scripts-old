@@ -1,0 +1,73 @@
+$(document).ready (function(){
+//Função para saber nome e sexo:
+$("meu-submit").click(function(){ 
+$("#msg").html("Olá"); });       
+//Mudando a cor de fundo de uma div ou elemento através de uma seleção.
+function vermelho() {
+  // pegar a checkbox
+  var checkBox = document.getElementById("cor1");
+  // pegar a div
+  var caixa = document.getElementById("bloco2");
+  //testar se a cor está selecionada
+  if (checkBox.checked == true){
+    caixa.style.background = "red";
+  } else {
+    caixa.style.background = "lightgray";}}
+function verde() {
+  var checkBox = document.getElementById("cor2");
+  var caixa = document.getElementById("bloco1");
+  if (checkBox.checked == true){
+    caixa.style.background = "green";
+  } else {
+    caixa.style.background = "lightgray";}}
+function azul() {
+  var checkBox = document.getElementById("cor3");
+  var caixa = document.getElementById("bloco3");
+  if (checkBox.checked == true){
+    caixa.style.background = "blue";
+  } else {
+    caixa.style.background = "lightgray";}}
+function branco() {
+  var checkBox = document.getElementById("cor4");
+  var caixa = document.getElementById("bloco4");
+  if (checkBox.checked == true){
+    caixa.style.background = "white";
+  } else {
+    caixa.style.background = "lightgray";}}
+function amarelo() {
+  var checkBox = document.getElementById("cor5");
+  var caixa = document.getElementById("bloco5");
+  if (checkBox.checked == true){
+    caixa.style.background = "yellow";
+  } else {
+    caixa.style.background = "lightgray";}}
+function preto() {
+  var checkBox = document.getElementById("cor6");
+  var caixa = document.getElementById("bloco6");
+  if (checkBox.checked == true){
+    caixa.style.background = "black";
+  } else {
+    caixa.style.background = "lightgray";}}
+//Calculando a diferença entre as datas
+function calcData(){
+    var data1=new Date();
+    var ano= data1.getFullYear();
+    var data2=new Date(document.getElementById("dataNiver").value);
+    var niver=data2.getFullYear();
+    var diff= ano - niver;
+    document.getElementById("resposta").innerHTML = "Você "+diff+" tem anos";}
+    document.getElementById("submit2").onclick = function(e) {
+    calcData();}
+//Inserindo alertas de acordo com a escolha selecionada
+function mens(){
+var msg = document.getElementById("ss").value;
+    if(msg =="2"){
+         alert("Muito Obrigado");
+    return true;}
+    else if(msg =="3"){
+        alert("Seja bem vindo!");
+        return true;    }
+    else {alert("Escolha a mensagem!");}}
+   document.getElementById("submit3").onclick = function(e) {
+    mens();}});
+    
